@@ -71,7 +71,7 @@ in the project directory.
 ## Install
 
 - To install the current version...
-    - `pip install https://huggingface.co/diyclassics/la_dep_cltk_sm/resolve/main/la_dep_cltk_md-0.3.1/dist/la_dep_cltk_md-0.3.1.tar.gz`
+    - `pip install https://huggingface.co/diyclassics/la_dep_cltk_md/resolve/main/la_dep_cltk_md-0.3.1/dist/la_dep_cltk_md-0.3.1.tar.gz`
 
 ## Model repository
 
