@@ -24,6 +24,8 @@ for file in tqdm(files):
                 row.update(token)
                 rows.append(row)
                 last_token = token["id"]
+                if token["deprel"] == "root":
+                    last_root = token["id"]
             if "proi" in file:
                 row = {}
                 row.update({"file": file})
@@ -31,10 +33,13 @@ for file in tqdm(files):
                 token["id"] = last_token + 1
                 token["form"] = "."
                 token["lemma"] = "."
+                token["upos"] = None
+                token["xpos"] = "punc"
                 token["feats"] = None
-                token["head"] = token["id"]
+                token["deprel"] = "punct"
                 token["deps"] = None
                 token["misc"] = None
+                token["head"] = last_root
                 row.update(token)
                 rows.append(row)
 df = pd.DataFrame(rows)

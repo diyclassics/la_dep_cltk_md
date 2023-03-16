@@ -416,7 +416,7 @@ def map_xpos(row):
             "_": "_",
             "9": "particle",
             "0": "conjunction",
-            "P": "punctuation",
+            "P": "punc",
             "S": "proper_noun",
             "s": "noun",
             "c": "conjunction",

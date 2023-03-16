@@ -2,7 +2,7 @@
 
 # 🪐 spaCy Project: la_dep_cltk_md
 
-Code required to train spaCy-compatible md model for Latin. Latin pipeline with POS tagger, morphologizer, lemmatizer, and dependency parser trained on all available Latin UD treebanks, i.e. Perseus, PROIEL, ITTB,  UDante, and LLCT (see below). The model contains floret vectors trained on Wikipedia, Oscar, and UD data. Note also that a sm model (i.e. without vectors) is trained in the same pipeline.
+Code required to train spaCy-compatible md model for Latin. Latin pipeline with POS tagger, morphologizer,  lemmatizer, and dependency parser trained on all available Latin UD treebanks, i.e. Perseus, PROIEL, ITTB,  UDante, and LLCT (see below). The model contains floret vectors trained on Wikipedia, Oscar, and UD data. Note also that a sm model (i.e. without vectors) is trained in the same pipeline.
 
 
 ## 📋 project.yml
@@ -96,19 +96,19 @@ in the project directory.
 
 | Type | Score |
 | --- | --- |
-| `SENTS_F` | 85.24 |
-| `SENTS_P` | 85.84 |
-| `SENTS_R` | 84.65 |
-| `TAG_ACC` | 92.92 |
-| `POS_ACC` | 96.50 |
-| `MORPH_ACC` | 91.86 |
-| `LEMMA_ACC` | 94.17 |
-| `DEP_UAS` | 81.75 |
-| `DEP_LAS` | 74.51 |
-| `TOK2VEC_LOSS` | 10216731.34 |
-| `TAGGER_LOSS` | 1009750.56 |
-| `MORPHOLOGIZER_LOSS` | 2018163.87 |
-| `TRAINABLE_LEMMATIZER_LOSS` | 746248.75 |
-| `PARSER_LOSS` | 6078691.87 |
+| `SENTS_F` | 92.75 |
+| `SENTS_P` | 93.09 |
+| `SENTS_R` | 92.41 |
+| `TAG_ACC` | 93.58 |
+| `POS_ACC` | 96.92 |
+| `MORPH_ACC` | 91.72 |
+| `LEMMA_ACC` | 94.25 |
+| `DEP_UAS` | 81.86 |
+| `DEP_LAS` | 75.84 |
+| `TOK2VEC_LOSS` | 8284457.01 |
+| `TAGGER_LOSS` | 913771.50 |
+| `MORPHOLOGIZER_LOSS` | 1997175.68 |
+| `TRAINABLE_LEMMATIZER_LOSS` | 761110.79 |
+| `PARSER_LOSS` | 6647260.73 |
 
 NB: For full details on tags etc., see the README.md in the model package.

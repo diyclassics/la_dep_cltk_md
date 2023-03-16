@@ -107,14 +107,14 @@ workflows:
     - package-sm
     - package
     - document    
-    - clean
+    # - clean
 
 commands:
   - name: assets
     help: "Download assets"
     script:
       - "mkdir -p assets/original"
-      - python -m pip install https://huggingface.co/diyclassics/la_senter/resolve/main/la_senter-0.3.0/dist/la_senter-0.3.0.tar.gz
+      # - python -m pip install https://huggingface.co/diyclassics/la_senter/resolve/main/la_senter-0.3.1/dist/la_senter-0.3.1.tar.gz
       - python -m spacy project assets
 
   - name: preprocess
@@ -138,7 +138,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_pers_data}-train.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -146,7 +145,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_pers_data}-test.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -154,7 +152,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_proi_data}-train.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -162,7 +159,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_proi_data}-dev.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -170,7 +166,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_proi_data}-test.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -178,7 +173,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_ittb_data}-train.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -186,7 +180,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_ittb_data}-dev.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -194,7 +187,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_ittb_data}-test.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -202,7 +194,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_llct_data}-train.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -210,7 +201,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_llct_data}-dev.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -218,7 +208,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_llct_data}-test.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -226,7 +215,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_udan_data}-train.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens
@@ -234,7 +222,6 @@ commands:
         python -m spacy convert
         assets/processed/${vars.treebank_udan_data}-dev.conllu 
         corpus/ 
-        --base la_senter
         --converter conllu 
         --n-sents 10 
         --merge-subtokens

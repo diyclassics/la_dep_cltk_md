@@ -1,5 +1,6 @@
 import spacy
 from spacy.language import Language
+import string
 from typing import List
 
 from spacy.util import registry, compile_suffix_regex
@@ -169,6 +170,21 @@ def normer(doc):
 
     for token in doc:
         token.norm_ = norm(token.norm_)
+    return doc
+
+
+@Language.component("lemma_fixer")
+def lemma_fixer(doc):
+
+    for token in doc:
+        if token.text == "que" and (
+            token.pos_ == "CCONJ" or token.tag_ == "conjunction"
+        ):
+            token.lemma_ = token.text
+        if token.text in string.punctuation:
+            token.lemma_ = token.text
+            token.pos_ = "PUNCT"
+            token.tag_ = "punc"
     return doc
 
 
