@@ -107,14 +107,13 @@ workflows:
     - package-sm
     - package
     - document    
-    # - clean
+    - clean
 
 commands:
   - name: assets
     help: "Download assets"
     script:
       - "mkdir -p assets/original"
-      # - python -m pip install https://huggingface.co/diyclassics/la_senter/resolve/main/la_senter-0.3.1/dist/la_senter-0.3.1.tar.gz
       - python -m spacy project assets
 
   - name: preprocess
